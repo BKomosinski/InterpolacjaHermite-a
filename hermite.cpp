@@ -129,8 +129,8 @@ void oblicz_wspolczynniki_wielomianu2(interval_arithmetic::Interval<long double>
     for (int j = laczna_liczba_wezlow - 1; j >= 0; j--)
     {
         for (int i = j; i < laczna_liczba_wezlow - 1; i++) {
-            tabFx[i].a = tabFx[i].a - tabFx[i +1].a * tabX[j].a;
-            tabFx[i].b = tabFx[i].b - tabFx[i + 1].b * tabX[j].b;
+            tabFx[i] = tabFx[i] - (tabFx[i +1] * tabX[j]);
+            
         }
     }
 }
